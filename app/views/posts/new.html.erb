@@ -1,0 +1,27 @@
+<h3 style="text-align:center;color:orange;">New Post</h3>
+<%= form_for @post do |f| %>
+<p>
+<h4>
+<%= f.label:title %>: <br>
+<%= f.text_field:title %>
+</h4>
+<h4>
+<%= f.label:content, :style=>" vertical-align: top;" %>: <br />
+<%= f.text_area:content, :rows=>12,:cols=>23 %>
+</h4>
+<h4>
+<%= f.submit "Submit", :style=>" background: none repeat scroll 0 0 #FFAE05;border-radius: 12px 12px 12px 12px;color: #FFFFFF; height: 39px;width: 85px;" %>
+</h4>
+</p>
+<% end %>
+<style>
+#post_title, #post_content{
+border: 1px solid green;
+}
+#new_post{
+	border: 1px solid;
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 210px;
+}
+</style>
